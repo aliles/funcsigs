@@ -53,9 +53,9 @@ Copyright
 ---------
 
 This is a derived work of CPython under the terms of the `PSF License
-Agreement`_. The original CPython inspect module and its unit tests are the
-copyright of the Python Software Foundation. The derived work is distributed
-under the `Apache License Version 2.0`_.
+Agreement`_. The original CPython inspect module, its unit tests and
+documentation are the copyright of the Python Software Foundation. The derived
+work is distributed under the `Apache License Version 2.0`_.
 
 .. _Apache License Version 2.0: http://opensource.org/licenses/Apache-2.0
 .. _GitHub: https://github.com/aliles/funcsigs
