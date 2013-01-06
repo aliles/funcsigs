@@ -12,6 +12,21 @@ The reference documentation is standard library documentation for the
 `inspect`_ module in Python3. This documentation has been included in the
 ``funcsigs`` package documentation hosted on `Read The Docs`_.
 
+Example
+-------
+
+To obtain a signature object, pass the target function to the
+``funcsigs.signature`` function. ::
+
+    >>> from funcsigs import signature
+    >>> def foo(a, b=None, *args, **kwargs):
+    ...     pass
+
+    >>> sig = signature(foo)
+
+For the details of the signature object, refer to the either the package of
+standard library documentation.
+
 Compatability
 -------------
 
