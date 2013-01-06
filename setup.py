@@ -32,13 +32,13 @@ setup(
     author="Aaron Iles",
     author_email="aaron.iles@gmail.com",
     url="http://funcsigs.readthedocs.org",
-    description="",
+    description="Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+",
     long_description=open('README.rst').read(),
     # long_description=load_rst(),
     license="ASL",
     install_requires = [],
     classifiers = [
-        'Development Status :: 1 - Planning',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
@@ -48,6 +48,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries :: Python Modules'
