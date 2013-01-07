@@ -3,6 +3,7 @@ python:
   - 2.6
   - 2.7
   - 3.2
+  - pypy
 install:
   - pip install -r requirements/development.txt -r requirements/production.txt --use-mirrors
   - python setup.py install
