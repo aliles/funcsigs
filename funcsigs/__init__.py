@@ -30,7 +30,7 @@ _NonUserDefinedCallables = (_WrapperDescriptor,
 
 def formatannotation(annotation, base_module=None):
     if isinstance(annotation, type):
-        if annotation.__module__ in ('builtins', base_module):
+        if annotation.__module__ in ('builtins', '__builtin__', base_module):
             return annotation.__name__
         return annotation.__module__+'.'+annotation.__name__
     return repr(annotation)
