@@ -10,6 +10,7 @@ sdist:
 
 register:
 	python setup.py register
+	python setup.py sdist upload
 
 site:
 	cd docs; make html
