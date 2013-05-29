@@ -5,6 +5,8 @@ funcsigs
 Python 3.3's `inspect`_ module. The backport is compatible with Python 2.6, 2.7
 as well as 3.2 and up.
 
+|pypi_version|
+
 Documentation
 -------------
 
@@ -67,5 +69,11 @@ work is distributed under the `Apache License Version 2.0`_.
 .. _PEP 362: http://www.python.org/dev/peps/pep-0362/
 .. _inspect: http://docs.python.org/3/library/inspect.html#introspecting-callables-with-the-signature-object
 .. _issues system: https://github.com/alies/funcsigs/issues
+
 .. |build_status| image:: https://secure.travis-ci.org/aliles/funcsigs.png?branch=master
    :target: http://travis-ci.org/#!/aliles/funcsigs
+   :alt: Current build status
+
+.. |pypi_version| image:: https://pypip.in/v/funcsigs/badge.png
+   :target: https://crate.io/packages/funcsigs/
+   :alt: Latest PyPI version
