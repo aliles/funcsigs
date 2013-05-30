@@ -25,7 +25,7 @@ lint:
 	flake8 --exit-zero funcsigs tests
 
 coverage:
-	coverage report --show-missing --include="funcsigs*"
+	coverage report --show-missing
 
 clean:
 	python setup.py clean --all
