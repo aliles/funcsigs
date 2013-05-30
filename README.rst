@@ -51,7 +51,7 @@ Issues
 ------
 
 Source code for ``funcsigs`` is hosted on `GitHub`_. Any bug reports or feature
-requests can be made using GitHub's `issues system`_. |build_status|
+requests can be made using GitHub's `issues system`_. |build_status| |coverage|
 
 Copyright
 ---------
@@ -73,6 +73,10 @@ work is distributed under the `Apache License Version 2.0`_.
 .. |build_status| image:: https://secure.travis-ci.org/aliles/funcsigs.png?branch=master
    :target: http://travis-ci.org/#!/aliles/funcsigs
    :alt: Current build status
+
+.. |coverage| image:: https://coveralls.io/repos/aliles/funcsigs/badge.png?branch=master
+   :target: https://coveralls.io/r/aliles/funcsigs?branch=master
+   :alt: Coverage status
 
 .. |pypi_version| image:: https://pypip.in/v/funcsigs/badge.png
    :target: https://crate.io/packages/funcsigs/
