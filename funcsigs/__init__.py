@@ -65,8 +65,8 @@ def signature(obj):
             if sig.parameters:
                 first = sig.parameters.values()[0].replace(
                     kind=_POSITIONAL_ONLY)
-                return sig.replace(parameters=itertools.chain(
-                        (first,), tuple(sig.parameters.values())[1:]))
+                return sig.replace(
+                    parameters=(first,) + tuple(sig.parameters.values())[1:])
             else:
                 return sig
         else:
