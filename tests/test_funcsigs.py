@@ -70,6 +70,19 @@ class TestFunctionSignatures(unittest.TestCase):
     def test_readme(self):
         doctest.testfile('../README.rst')
 
+    def test_unbound_method(self):
+        class Test(object):
+            def method(self):
+                pass
+            def method_with_args(self, a):
+                pass
+        self.assertEqual(self.signature(Test.method),
+                (((('self', Ellipsis, Ellipsis, "positional_only")),), Ellipsis))
+        self.assertEqual(self.signature(Test.method_with_args), ((
+                ('self', Ellipsis, Ellipsis, "positional_only"),
+                ('a', Ellipsis, Ellipsis, "positional_or_keyword"),
+                ), Ellipsis))
+
 
 if __name__ == "__main__":
     unittest.begin()
