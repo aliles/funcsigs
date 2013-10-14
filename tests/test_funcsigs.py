@@ -6,6 +6,7 @@ except ImportError:
     import unittest
 
 import doctest
+import sys
 
 import funcsigs as inspect
 
@@ -69,6 +70,23 @@ class TestFunctionSignatures(unittest.TestCase):
 
     def test_readme(self):
         doctest.testfile('../README.rst')
+
+    def test_unbound_method(self):
+        if sys.version_info < (3,):
+            self_kind = "positional_only"
+        else:
+            self_kind = "positional_or_keyword"
+        class Test(object):
+            def method(self):
+                pass
+            def method_with_args(self, a):
+                pass
+        self.assertEqual(self.signature(Test.method),
+                (((('self', Ellipsis, Ellipsis, self_kind)),), Ellipsis))
+        self.assertEqual(self.signature(Test.method_with_args), ((
+                ('self', Ellipsis, Ellipsis, self_kind),
+                ('a', Ellipsis, Ellipsis, "positional_or_keyword"),
+                ), Ellipsis))
 
 
 if __name__ == "__main__":
