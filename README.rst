@@ -17,7 +17,7 @@ The reference documentation is standard library documentation for the
 Example
 -------
 
-To obtain a signature object, pass the target function to the
+To obtain a `Signature` object, pass the target function to the
 ``funcsigs.signature`` function. ::
 
     >>> from funcsigs import signature
@@ -26,8 +26,9 @@ To obtain a signature object, pass the target function to the
 
     >>> sig = signature(foo)
 
-For the details of the signature object, refer to the either the package of
-standard library documentation.
+For the details of the `Signature` object, refer to either the package or
+the `standard library documentation for inspect.Signature
+<https://docs.python.org/3/library/inspect.html#inspect.Signature>`_.
 
 Compatability
 -------------
