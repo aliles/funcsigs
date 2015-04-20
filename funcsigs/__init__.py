@@ -13,7 +13,7 @@ import types
 try:
     from collections import OrderedDict
 except ImportError:
-    from funcsigs.odict import OrderedDict
+    from ordereddict import OrderedDict
 
 from funcsigs.version import __version__
 
