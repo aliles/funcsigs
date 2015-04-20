@@ -33,7 +33,7 @@ setup(
     long_description=open('README.rst').read(),
     # long_description=load_rst(),
     license="ASL",
-    install_requires = [],
+    install_requires = ['ordereddict'],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
