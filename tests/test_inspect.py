@@ -1,6 +1,7 @@
 # Copyright 2001-2013 Python Software Foundation; All Rights Reserved
 from __future__ import absolute_import, division, print_function
 import collections
+import functools
 import sys
 
 try:
@@ -981,6 +982,15 @@ def test_signature_bind_positional_only(self):
     with self.assertRaisesRegex(TypeError, "parameter is positional only"):
         self.call(test, a_po=1, b_po=2)
 """)
+
+    def test_bind_self(self):
+        class F:
+            def f(a, self):
+                return a, self
+        an_f = F()
+        partial_f = functools.partial(F.f, an_f)
+        ba = inspect.signature(partial_f).bind(self=10)
+        self.assertEqual((an_f, 10), partial_f(*ba.args, **ba.kwargs))
 
 
 class TestBoundArguments(unittest.TestCase):

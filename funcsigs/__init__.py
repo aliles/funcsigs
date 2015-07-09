@@ -769,16 +769,16 @@ class Signature(object):
                 # Process our '**kwargs'-like parameter
                 arguments[kwargs_param.name] = kwargs
             else:
-                raise TypeError('too many keyword arguments')
+                raise TypeError('too many keyword arguments %r' % kwargs)
 
         return self._bound_arguments_cls(self, arguments)
 
-    def bind(self, *args, **kwargs):
+    def bind(*args, **kwargs):
         '''Get a BoundArguments object, that maps the passed `args`
         and `kwargs` to the function's signature.  Raises `TypeError`
         if the passed arguments can not be bound.
         '''
-        return self._bind(args, kwargs)
+        return args[0]._bind(args[1:], kwargs)
 
     def bind_partial(self, *args, **kwargs):
         '''Get a BoundArguments object, that partially maps the
