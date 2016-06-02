@@ -28,7 +28,7 @@ setup(
     zip_safe=False,
     author="Aaron Iles",
     author_email="aaron.iles@gmail.com",
-    url="http://funcsigs.readthedocs.org",
+    url="https://funcsigs.readthedocs.io",
     description="Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+",
     long_description=open('README.rst').read(),
     # long_description=load_rst(),
