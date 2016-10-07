@@ -440,6 +440,29 @@ class BoundArguments(object):
     def __ne__(self, other):
         return not self.__eq__(other)
 
+    def apply_defaults(self):
+        arguments = self.arguments
+
+        # Creating a new one and not modifying in-place for thread safety.
+        new_arguments = []
+
+        for name, param in self._signature.parameters.items():
+            try:
+                new_arguments.append((name, arguments[name]))
+            except KeyError:
+                if param.default is not _empty:
+                    val = param.default
+                elif param.kind is _VAR_POSITIONAL:
+                    val = ()
+                elif param.kind is _VAR_KEYWORD:
+                    val = {}
+                else:
+                    # BoundArguments was likely created by bind_partial
+                    continue
+                new_arguments.append((name, val))
+
+        self.arguments = OrderedDict(new_arguments)
+
 
 class Signature(object):
     '''A Signature object represents the overall signature of a function.
