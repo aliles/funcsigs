@@ -43,7 +43,7 @@ Source code for *funcsigs* is hosted on `GitHub`_. Any bug reports or feature
 requests can be made using GitHub's `issues system`_.
 
 .. _GitHub: https://github.com/aliles/funcsigs
-.. _issues system: https://github.com/alies/funcsigs/issues
+.. _issues system: https://github.com/aliles/funcsigs/issues
 
 Introspecting callables with the Signature object
 -------------------------------------------------
