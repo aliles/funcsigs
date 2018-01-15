@@ -68,7 +68,7 @@ work is distributed under the `Apache License Version 2.0`_.
 .. _Read The Docs: http://funcsigs.readthedocs.org/
 .. _PEP 362: http://www.python.org/dev/peps/pep-0362/
 .. _inspect: http://docs.python.org/3/library/inspect.html#introspecting-callables-with-the-signature-object
-.. _issues system: https://github.com/alies/funcsigs/issues
+.. _issues system: https://github.com/aliles/funcsigs/issues
 
 .. |build_status| image:: https://secure.travis-ci.org/aliles/funcsigs.png?branch=master
    :target: http://travis-ci.org/#!/aliles/funcsigs
