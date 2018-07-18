@@ -1,6 +1,7 @@
 # Copyright 2001-2013 Python Software Foundation; All Rights Reserved
 from __future__ import absolute_import, division, print_function
 import collections
+import pickle
 import sys
 
 try:
@@ -64,6 +65,13 @@ def test_signature_object(self):
     with self.assertRaisesRegex(ValueError, 'duplicate parameter name'):
         S((po, pk, args, kwargs2, ko))
 """)
+
+    def test_signature_pickling(self):
+        def foo(a): pass
+
+        sig = inspect.signature(foo)
+
+        self.assertEqual(sig, pickle.loads(pickle.dumps(sig)))
 
     def test_signature_immutability(self):
         def test(a):
