@@ -263,6 +263,14 @@ class Parameter(object):
 
         self._partial_kwarg = _partial_kwarg
 
+
+    def __getstate__(self):
+        return tuple(getattr(self, k) for k in self.__slots__)
+
+    def __setstate__(self, items):
+        for k, item in zip(self.__slots__, items):
+            setattr(self, k, item)
+
     @property
     def name(self):
         return self._name
@@ -508,6 +516,13 @@ class Signature(object):
 
         self._parameters = params
         self._return_annotation = return_annotation
+
+    def __getstate__(self):
+        return tuple(getattr(self, k) for k in self.__slots__)
+
+    def __setstate__(self, items):
+        for k, item in zip(self.__slots__, items):
+            setattr(self, k, item)
 
     @classmethod
     def from_function(cls, func):
