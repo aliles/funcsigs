@@ -16,7 +16,7 @@ as well as 3.2 and up.
 .. _PEP 362: http://www.python.org/dev/peps/pep-0362/
 .. _inspect: http://docs.python.org/3/library/inspect.html#introspecting-callables-with-the-signature-object
 
-Compatability
+Compatibility
 `````````````
 
 The *funcsigs* backport has been tested against:
@@ -28,10 +28,10 @@ The *funcsigs* backport has been tested against:
 
 Continuous integration testing is provided by `Travis CI`_.
 
-Under Python 2.x there is a compatability issue when a function is assigned to
+Under Python 2.x there is a compatibility issue when a function is assigned to
 the ``__wrapped__`` property of a class after it has been constructed.
 Similiarily there under PyPy directly passing the ``__call__`` method of a
-builtin is also a compatability issues.  Otherwise the functionality is
+builtin is also a compatibility issues.  Otherwise the functionality is
 believed to be uniform between both Python2 and Python3.
 
 .. _Travis CI: http://travis-ci.org/
